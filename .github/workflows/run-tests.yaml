@@ -27,4 +27,5 @@ jobs:
 
       - name: Run Docker Compose
         run: |
+          ls -la
           docker compose up
