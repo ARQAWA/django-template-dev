@@ -23,18 +23,8 @@ jobs:
         run: |
           cookiecutter . --no-input --output-dir /tmp
           cd /tmp/dummy
-          ls -la
           python -m pip install -r requirements.txt
-
-      - name: Create project from Cookiecutter template
-        run: cookiecutter [путь к вашему шаблону] --no-input --output-dir /tmp/test_template
-
-      - name: Install dependencies
-        run: |
-          cd /tmp/test_template/[имя созданного проекта]
-          pip install -r requirements.txt
 
       - name: Run Docker Compose
         run: |
-          cd /tmp/test_template/[имя созданного проекта]
-          docker-compose up -d
+          docker-compose up
