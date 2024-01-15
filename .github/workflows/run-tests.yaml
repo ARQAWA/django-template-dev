@@ -19,13 +19,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install cookiecutter
 
-      - name: Create project from template
+      - name: Create project and run tests
         run: |
           cookiecutter . --no-input --output-dir /tmp
           cd /tmp/dummy
           python -m pip install -r requirements.txt
-
-      - name: Run Docker Compose
-        run: |
           ls -la
           docker compose up
