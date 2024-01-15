@@ -21,8 +21,8 @@ jobs:
 
       - name: Create project from template
         run: |
-          cookiecutter . --no-input --output-dir /tmp/template
-          cd /tmp/template
+          cookiecutter . --no-input --output-dir /tmp
+          cd /tmp/dummy
           ls -la
           python -m pip install -r requirements.txt
 
