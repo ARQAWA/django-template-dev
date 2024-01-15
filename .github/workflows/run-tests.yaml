@@ -23,6 +23,6 @@ jobs:
         run: |
           cookiecutter . --no-input --output-dir /tmp
           cd /tmp/dummy
-          python -m pip install -r requirements.txt
-          ls -la
+          echo "DJANGO_DEBUG=1" > .env 
+          docker compose build
           docker compose up
