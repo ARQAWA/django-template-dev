@@ -23,6 +23,7 @@ jobs:
         run: |
           cookiecutter . --no-input --output-dir /tmp/template
           cd /tmp/template
+          ls -la
           python -m pip install -r requirements.txt
 
       - name: Create project from Cookiecutter template
